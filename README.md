@@ -6,7 +6,7 @@
   - Run `npm install`
   - If webpack not installed automatically, use `npm install --save-dev webpack/webpack`
   - Run `npm run dev`
-  - If the browser doesn't open automatically, open http://localhost:8888
+  - If the browser doesn't open automatically, open http://localhost:9000
 
 ## How to build the project
 
