@@ -108,12 +108,17 @@ nav{
     width: 100%;
     height: 200px;
     padding: var(--padding-inline);
+    
 }
 .img img{
     width: 100%;
     min-height: 100%;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    
+}
+.shop-card h2{
+    font-size: 2.2rem;
 }
 .shop-card-descrip{
     justify-content: space-between;
@@ -177,7 +182,7 @@ nav{
     height: 280px;
 }
 .product-card-area .shop-card h2{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .product-card-area .shop-card .img{
     height: 100px;
