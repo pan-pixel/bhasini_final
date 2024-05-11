@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "name": "ray ban classic",
+      "description": "Experience timeless elegance with Ray Ban Classic sunglasses. Crafted for enduring style, these shades blend iconic design with modern flair. From sleek Wayfarer frames to versatile lens options, they're the epitome of sophistication.",
+      "price": 1999,
+      "path":"../models/specs2.glb"
+    },
+    {
+      "name": "vincent case rim aviator",
+      "description": "Elevate your look with Vincent Case Rim Aviator sunglasses. Combining classic aviator style with contemporary edge, they exude effortless coolness. Sleek metal rims and bold geometric lines make a statement wherever you go.",
+      "price": 2999,
+      "path":"../models/specs3.glb"
+    },
+    {
+      "name": "john jacobs",
+      "description": "Discover understated luxury with John Jacobs sunglasses. Minimalist design meets premium materials for refined elegance. Lightweight acetate and durable metal accents ensure both style and substance. Perfect for any occasion, they add a touch of sophistication to every ensemble.",
+      "price": 999,
+      "path":"../models/specs4.glb"
+    }
+  ]
+}

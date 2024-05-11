@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --padding-inline:12px;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    color: black;
+}
+h1{
+    font-size: 3rem;
+    line-height: 3rem;
+}
+h2{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+h3{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+p{
+    
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    color: black;
+
+}
+a{
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+}
+
+/* <----Utility Clases----> */
+
+.flex{
+    display: flex;
+}
+ul{
+    list-style: none;
+}
+.container{
+    max-width: 1400px;
+    margin-inline: auto;
+    overflow: hidden;
+    
+}
+
+.primary-button{
+    background-color: black;
+    border-radius: 25px;
+    color:white !important;
+    padding: 10px 20px;
+    align-items: center;
+    text-transform: uppercase;
+}
+.upper{
+    text-transform: uppercase;
+}
+
+@keyframes imagefloat {
+    0%{
+        transform: translateY(0%);
+    }
+    33%{
+        transform: translateY(10%);
+    }
+    66%{
+        transform: translateY(-1%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+#recorder-button {
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+  }
+  
+/* #recorder-button-div {
+    background-color: red;
+    border: 3px solid rgba(0,0,0,.5);
+    border-radius: 50%;
+    height: 80px;
+    transition: .3s;
+    width: 80px;
+  } */
+  
+/* #recorder-button-div:hover {
+    opacity: .9;
+    transition: .3s;
+  } */
+
+
+

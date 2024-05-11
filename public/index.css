@@ -1,0 +1,227 @@
+/* Navbar */
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    z-index: 15;
+    background-color: inherit;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+}
+.main-nav{
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-inline);
+}
+.left-nav img{
+    width: 100px;
+}
+.navlinks{
+    gap: 30px;
+}
+.hoverlinks{
+    text-transform: uppercase;
+    transition: 0.2s all ease-in-out;
+}
+
+.caurosel {
+    /* background-color: aquamarine; */
+    height: 100vh;
+    position: relative;
+    max-width: 100%;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+
+/* bannner */
+.banner{
+    background-color: rgb(215, 215, 215);
+    height: 100vh;
+    position: relative; 
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 10px ), repeating-linear-gradient( #c4c4c455, #c4c4c4 );
+    overflow: hidden;
+}
+.main-banner-cont{
+    height: 100%;
+    position: relative; 
+}
+.banner-content{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 100px;
+    z-index: 12;
+}
+.banner-bg-text{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 11;
+    animation:imagefloat 40s ease-in-out infinite ;
+
+}
+.banner-bg-text h1{
+    font-size: 12rem;
+    color: white;
+    opacity: 0.6;
+ }
+
+.left-banner-content{
+    width: 30%;
+    flex-direction: column;
+    gap: 20px;
+    padding: var(--padding-inline);
+}
+.left-banner-content h1{
+    text-transform: uppercase;
+}
+.right-banner-content{
+    width: 65%;
+    opacity: 0.9;
+}
+.right-banner-content img{
+    width: 100%;
+    animation:imagefloat 40s ease-in-out infinite ;
+}
+
+/* shop cards */
+.shop-card{
+    width: 30%;
+    box-shadow: 0 8px 32px 0 rgb(236, 236, 236);
+    height: 400px;
+    padding:50px var(--padding-inline);
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    transition: 0.3s all ease-in-out;
+}
+.shop-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 20px 52px 0 rgb(226, 226, 226);
+}
+.img{
+    width: 100%;
+    height: 200px;
+    padding: var(--padding-inline);
+}
+.img img{
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.shop-card-descrip{
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-inline);
+}
+.shop-btn{
+    text-align: center;
+}
+
+.shop-cont{
+    padding:100px var(--padding-inline);
+    flex-direction: column;
+    gap: 50px;
+}
+.shop-heading{
+    text-align: center;
+}
+.shop-card-area{
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+/* ar banner */
+.ar{
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(./images/3592.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+.ar-cont h1{
+    color: white;
+    text-shadow:0 5px 8px black;
+}
+.ar-cont{
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding: 50px var(--padding-inline);
+}
+.ar-cont .shop-btn .primary-button{
+    border: 1px solid white;
+}
+
+
+/* product */
+.product-cont{
+    padding:100px var(--padding-inline);
+    flex-direction: column;
+    gap: 50px;
+}
+.product-card-area{
+    justify-content: center;
+    gap: 10px;
+}
+.product-card-area .shop-card{
+    width: calc(20% - 12px);
+    height: 280px;
+}
+.product-card-area .shop-card h2{
+    font-size: 1.2rem;
+}
+.product-card-area .shop-card .img{
+    height: 100px;
+}
+.product-heading{
+    text-align: center;
+}
+
+/* footer */
+
+footer{
+    padding: 40px var(--padding-inline);
+    user-select: none;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 10px ), repeating-linear-gradient( #c4c4c455, #c4c4c4 );
+
+}
+.footer-cont{
+    justify-content: space-between;
+}
+.left-foot,.mid-foot,.right-foot{
+    width: 30%
+}
+
+.left-foot img{
+    width: 100px;
+}
+.social-cont{
+    width: 60%;
+    justify-content: space-between;
+    padding-top: var(--padding-inline);
+    gap: 10px;
+}
+.social-cont li a{
+    transition:0.2s all ease-in;
+}
+.social-cont li a:hover{
+    transform: scale(1.15);
+}
+.footer-links{
+    flex-direction: column;
+    gap: 10px;
+    padding-top: var(--padding-inline);
+}
+.footer-links li a{
+    font-size: 1.1rem;
+    height: 2rem;
+}

@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+/* .container {
+    max-width: 100%;
+    margin-inline: auto;
+    overflow: hidden;
+} */
+
+.caurosel {
+    background-color: aquamarine;
+    height: 100vh;
+    position: relative;
+    max-width: 100%;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+.card-ring{
+    height: 10%;
+}
+.cards-selection {
+    position: absolute;
+    bottom: 10%;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    padding: var(--padding-inline);
+    overflow-x: hidden;
+    gap: 25px;
+    scroll-snap-type: x mandatory;
+}
+.cards-selection .card:nth-child(-n+2),.cards-selection .card:nth-last-child(-n+2){
+    background-color: inherit;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+.card {
+    padding: var(--padding-inline);
+    border-radius: 50%;
+    min-width: calc(100% / 5 - 20px);
+    height: 100%;
+    background-color: darkkhaki;
+    scroll-snap-align: center;
+}
+.card-load{
+    width: calc(100% / 5 );
+    /* display: none; */
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader{
+    width: 60%; /* Or any fixed width you desire */
+    height: 0;
+    padding-bottom: 60%;
+    border-radius: 50%;
+    border: 1px solid #f3f3f3;
+    border-top: 1px solid black;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.card-ring{
+    position: absolute;
+    width: calc(100% / 5 );
+    height: 10%;
+
+    border: 5px solid white;
+    border-radius: 50%;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sample-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

@@ -1,0 +1,171 @@
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <title>Bhashini</title>
+    <link rel="stylesheet" href="base.css">
+    <script src="https://kit.fontawesome.com/b5a8447ad3.js" crossorigin="anonymous" defer></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="singleview.css" />
+
+
+    <!-- <script type="module" src="./viewcontrol.js" defer></script> -->
+    <!-- <script type="module" src="./product_data.js" defer></script> -->
+    <!-- <script type="module" src="./control.js" defer></script> -->
+
+
+
+
+    <!-- <script src="../js/snap-scroll.js" defer></script> -->
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.156.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.156.0/examples/jsm/"
+        }
+      }
+    </script>
+
+  </head>
+
+  <body>
+    <!-- loading screen -->
+    <div class="fixed-fullscreen" id="loading-screen">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <!-- <img
+          id="initial-loading-logo"
+          style="max-width: 200px"
+          src="./images/crystal.png"
+          class="animate-bounce"
+        /> -->
+        <div
+          style="
+            width: 100%;
+            height: 8px;
+            margin-top: 20px;
+            background-color: rgb(55 65 81 / 1);
+            border-radius: 100px;
+            overflow: hidden;
+          "
+        >
+          <div id="loading-progress-bar"></div>
+        </div>
+        <img
+          id="initial-loading-text"
+          style="max-width: 140px; margin-top: 30px"
+          src="./images/giphy.gif"
+        />
+      </div>
+    </div>
+
+    <nav>
+      <section class="main-nav container flex">
+          <div class="left-nav">
+              <img src="./images/nav.svg" alt="">
+          </div>
+          <div class="mid-nav flex">
+              <ul class="navlinks flex">
+                  <li><a href="./index.html" class="hoverlinks">home</a></li>
+                  <li><a href="" class="hoverlinks">about</a></li>
+                  <li><a href="" class="hoverlinks">products</a></li>
+                  <li><a href="" class="hoverlinks">ar try on</a></li>
+                  <li><a href="" class="hoverlinks">contact</a></li>
+              </ul>
+          </div>
+          <div class="right-nav">
+              <a href=""><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
+          </div>
+      </section>
+  </nav>
+    
+    <!-- AR screen -->
+    <section class="product-display">
+  
+    <div class="product-cont container" id="threeview">
+      <div class="left-product-cont">
+          <div id="container" class="threejsview"></div>
+      </div>
+      <div class="right-product-cont flex">
+          <h1 id="productName">Ray Bans Classic</h1>
+          <p id="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, unde qui vero, ipsum quisquam molestias voluptatem doloremque a odio ducimus alias harum excepturi quos aperiam neque sapiente animi consequatur officiis.</p>
+          <h2 id="productPrice">₹1,199</h2>
+          <div class="but-now-bttn"><a href="" class="primary-button"><i class="fa-solid fa-bag-shopping"></i> buy now</a></div>
+          <div class="add-to-cart-btn"><a href="" class="primary-button"><i class="fa-solid fa-cart-shopping"></i> cart</a></div>
+      </div>
+    </div>
+
+
+    <div class="ar-screen" id="ar-screen" style="display: none">
+    </div>
+
+          <!-- <button id="recorder-button">
+            <div id="recorder-button-div"></div>
+          </button>
+          <audio id="audio"></audio> -->
+
+        <div class="overlays flex">
+            <div class="threeview" id="btn1">3D View</div>
+            <div class="arview" id="btn2">AR View</div>
+        </div>
+
+      <div class="cards-selection flex">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <!-- Main Cards -->
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <!-- <div class="card"></div> -->
+        <!-- <div class="card"></div> -->
+        <!-- <div class="card"></div> -->
+        <!-- ^--Main Cards -->
+        <div class="card"></div>
+        <div class="card"></div>
+      <!-- </div>
+    </div> -->
+
+    </div>
+    <div class="card-ring flex">
+      <button id="recorder-button">
+            <!-- <div> -->
+              <i id="recorder-button-div" class="fa-solid fa-microphone"></i>
+            <!-- </div> -->
+          </button>
+          <audio id="audio"></audio>
+    </div>
+    <div class="card-load" id="load-spin" style="display: none;">
+      <div class="loader"></div>
+</div>
+        <button class="prev-btn"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
+        <button class="next-btn"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
+
+  </section>
+
+
+
+    <script type="text/javascript" src="main.js"></script>
+    <script src="web_audio_recorder_js/WebAudioRecorder.js"></script>
+    <script type="module" src="./3d.js"></script>
+    <script type="module" src="./viewcontrol.js" defer></script>
+    <script type="module" src="./product_data.js" defer></script>
+    <script type="module" src="./control.js" defer></script>
+
+  </body>
+</html>

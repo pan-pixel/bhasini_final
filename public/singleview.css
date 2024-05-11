@@ -1,0 +1,169 @@
+.product-cont {
+    position: absolute; /* Position elements absolutely */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: -1; /* Start with a lower z-index */
+    opacity: 0; /* Hide initially */
+    pointer-events: none; /* Disable pointer events */
+}
+
+.product-cont.active {
+    z-index: 1; /* Set a higher z-index for active product container */
+    opacity: 1; /* Show */
+    pointer-events: auto; /* Enable pointer events */
+}
+
+.ar-screen {
+    position: absolute; /* Position elements absolutely */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Start with a lower z-index */
+    opacity: 0; /* Hide initially */
+    pointer-events: none; /* Disable pointer events */
+    background-color: antiquewhite;
+}
+
+.ar-screen.active {
+    z-index: 2; /* Set a higher z-index for active AR screen */
+    opacity: 1; /* Show */
+    pointer-events: auto; /* Enable pointer events */
+}
+
+.threejsview {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+
+.left-product-cont {
+    width: 40%;
+    height: 500px;
+}
+
+.right-product-cont {
+    width: 100%;
+    max-width: 55%;
+    height: 100%;
+    flex-direction: column;
+    gap: 20px;
+    padding: var(--padding-inline);
+    justify-content: center;
+    user-select: none;
+}
+.right-product-cont h1{
+    text-transform: uppercase;
+}
+.overlays{
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    /* border: 1px solid; */
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 35px 0 rgba(0, 0, 0, 0.352);
+    user-select: none;
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    cursor: pointer;
+}
+/* .threeview{
+    border-right: 1px solid black;
+} */
+.threeview,.arview{
+    padding: var(--padding-inline);
+}
+.threeview.active{
+    font-weight: bolder;
+    background-color:white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0,0.5);
+    border: 0.5px solid black;
+    border-radius: inherit;
+}
+.arview.active{
+    font-weight: bolder;
+    background-color:white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0,0.5);
+    border: 0.5px solid black;
+    border-radius: inherit;
+}
+
+
+.cards-selection {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+    height: 10vh;
+    width: 30%;
+    align-items: center;
+    padding: var(--padding-inline);
+    overflow-x: hidden;
+    gap: 25px;
+    scroll-snap-type: x mandatory;
+    border-radius: 10%;
+}
+.cards-selection .card:nth-child(-n+2),.cards-selection .card:nth-last-child(-n+2){
+    /* background-color:inherit;
+}
+.cards-selection .card:nth-child(-n+2){ */
+    background-color: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.card {
+    padding: var(--padding-inline);
+    border-radius: 50%;
+    min-width: calc(100% / 5 - 20px);
+    height: 100%;
+    background-color: black;
+    scroll-snap-align: center;
+}
+
+.card-ring{
+    position: absolute;
+    z-index: 10;
+    width: calc(30% / 5 );
+    height: 10%;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: center;
+}
+.card-ring i{
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+.prev-btn{
+    background-color: inherit;
+    border: none;
+    position: absolute;
+    z-index: 10;
+   bottom: 10%;
+   left: 33.5%;
+}
+.next-btn{
+    background-color: inherit;
+    border: none;
+    position: absolute;
+    z-index: 10;
+   bottom: 10%;
+   left: 65%;
+}
