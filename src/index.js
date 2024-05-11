@@ -30,10 +30,11 @@ const selectedIndex = localStorage.getItem('selectedIndex');
   const effectList = [
     "effects/ray-ban-wayfarer.deepar",
     "effects/Chashma.deepar",
-    "effects/anek.deepar",
+    "effects/specs3.deepar",
     "effects/SimpleGlasses.deepar",
-    "effects/cool_glasses.deepar",
-    "effects/party_glasses.deepar"
+    "effects/specs1.deepar",
+    "effects/specs2.deepar",
+    "effects/specs4.deepar",
   ];
 
   let deepAR = null;
