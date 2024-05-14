@@ -30,7 +30,7 @@ voiceModels ={
     "ta" : "bhashini/iitm/asr-dravidian--gpu--t4"                       #Tamil
 }
 
-selectedLang = "te"
+selectedLang = "hi"
 
 if selectedLang == "or":
     targetLangAPI = translateModels["or"]
@@ -61,7 +61,30 @@ def callBhashiniASR(base64_content):
         'Authorization': os.getenv("AUTH"),
         'Connection': 'keep-alive'
     }
-    request_body = {
+
+    request_body1 = {
+        "pipelineTasks": [
+            {
+                "taskType": "asr",
+                "config": {
+                    "language": {
+                        "sourceLanguage": selectedLang
+                    },
+                    "serviceId": voiceModels[selectedLang],
+                    "audioFormat": "flac",
+                    "samplingRate": 16000
+                }
+            }
+        ],
+        "inputData": {
+            "audio": [
+                {
+                    "audioContent": base64_content
+                }
+            ]
+        }
+    }
+    request_body2 = {
         "pipelineTasks": [
             {
                 "taskType": "asr",
@@ -95,15 +118,23 @@ def callBhashiniASR(base64_content):
     }
 
     try:
-        response = requests.post(url, headers=headers, json=request_body)
+
+        if(selectedLang == "en"):
+            response = requests.post(url, headers=headers, json=request_body1)
+        else:
+            response = requests.post(url, headers=headers, json=request_body2)
 
         if not response.ok:
             print(response.text)
             response.raise_for_status()
 
         responseData = response.json()
-        translation = responseData['pipelineResponse'][1]['output'][0]['target'].lower()
-        print("Original : ", responseData['pipelineResponse'][1]['output'][0]['source'].lower())
+        print(responseData)
+        if(selectedLang == "en"):
+            translation = responseData['pipelineResponse'][0]['output'][0]['source'].lower()
+        else:
+            translation = responseData['pipelineResponse'][1]['output'][0]['target'].lower()
+        # print("Original : ", responseData['pipelineResponse'][1]['output'][0]['source'].lower())
         print("Translated : ",translation)
         if ('next' in translation):
             return 'next'
