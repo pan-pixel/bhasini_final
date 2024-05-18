@@ -22,6 +22,7 @@ const buyNowButtons = document.querySelectorAll('.buy-now-button');
 
 document.addEventListener('DOMContentLoaded', function() {
     const elementsToTranslate = document.querySelectorAll('.langChange');
+    localStorage.setItem('language', 'en');
         
     let texts = [];
     elementsToTranslate.forEach(element => {
