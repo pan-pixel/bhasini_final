@@ -2,6 +2,7 @@ import requests
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
+import concurrent.futures
 load_dotenv()
 
 openai = OpenAI(api_key=os.getenv("API_KEY"))
@@ -148,10 +149,76 @@ def callBhashiniASR(base64_content):
         print('There was a problem with the fetch operation:', e)
         raise e
     
+    
+def process_text(t, selectedLang, url, headers, translation_cache):
+    if t in translation_cache:
+        return t, translation_cache[t]
+    
+    body = {
+        "pipelineTasks": [
+            {
+                "taskType": "transliteration",
+                "config": {
+                    "language": {
+                        "sourceLanguage": "en",
+                        "targetLanguage": selectedLang
+                    },
+                    "serviceId": "ai4bharat/indictrans-v2-all-gpu--t4",
+                    "isSentence": "false",
+                    "numSuggestions": 7
+                }
+            }
+        ],
+        "inputData": {
+            "input": [
+                {
+                    "source": t
+                }
+            ]
+        }
+    }
 
+    response = requests.post(url, headers=headers, json=body)
+    if not response.ok:
+        response.raise_for_status()
+    
+    responseData = response.json()
+    translated = responseData['pipelineResponse'][0]['output'][0]['target']
+    
+    return t, translated
 
 
 def processAllContent(text, selectedLang):
+    url = 'https://dhruva-api.bhashini.gov.in/services/inference/pipeline'
+    
+    headers = {
+        'Content-Type': 'application/json',
+        'Authorization': os.getenv("AUTH"),
+        'Connection': 'keep-alive'
+    }
+
+    translation_cache = {}
+    res = [None] * len(text)  # Pre-allocate the result list
+
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        # Create a list of future tasks with their indices
+        future_to_index = {executor.submit(process_text, t, selectedLang, url, headers, translation_cache): i for i, t in enumerate(text)}
+        
+        for future in concurrent.futures.as_completed(future_to_index):
+            index = future_to_index[future]
+            try:
+                original, translated = future.result()
+                translation_cache[original] = translated
+                res[index] = translated  # Place the result in the correct position
+            except Exception as e:
+                print(f'There was a problem with the fetch operation for text "{text[index]}":', e)
+    
+    return res
+
+
+
+
+def processAllContentSingle(text, selectedLang):
     url = 'https://dhruva-api.bhashini.gov.in/services/inference/pipeline'
     
     headers = {
