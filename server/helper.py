@@ -125,11 +125,9 @@ def callBhashiniASR(base64_content):
             response = requests.post(url, headers=headers, json=request_body2)
 
         if not response.ok:
-            print(response.text)
             response.raise_for_status()
 
         responseData = response.json()
-        print(responseData)
         if(selectedLang == "en"):
             translation = responseData['pipelineResponse'][0]['output'][0]['source'].lower()
         else:
