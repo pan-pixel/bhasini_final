@@ -18,3 +18,67 @@ const buyNowButtons = document.querySelectorAll('.buy-now-button');
 
         });
     });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const elementsToTranslate = document.querySelectorAll('.langChange');
+        
+    let texts = [];
+    elementsToTranslate.forEach(element => {
+        texts.push(element.textContent.trim());
+    });
+    document.getElementById('language-selector').addEventListener('change', async function() {
+        const elementsToTranslate = document.querySelectorAll('.langChange');
+        var selectedLanguage = this.value;
+        console.log('Selected language:', selectedLanguage);
+        localStorage.setItem("language", selectedLanguage);
+        if(selectedLanguage == "en"){
+            elementsToTranslate.forEach((element, index) => {
+                element.textContent = texts[index];
+            });
+        }
+        else {
+            try {
+                const translatedTexts = await fetchTranslation(texts, selectedLanguage);
+    
+                elementsToTranslate.forEach((element, index) => {
+                    element.textContent = translatedTexts[index];
+                });
+            } catch (error) {
+                console.error('Error translating text:', error);
+            }
+        }
+    
+    });
+
+});
+
+    async function fetchTranslation(texts, targetLanguage) {
+        const apiUrl = "http://127.0.0.1:5000/processContent";
+        const content = {
+            texts: texts,
+            lang: targetLanguage
+        };
+
+        return new Promise((resolve, reject) => {
+            fetch(apiUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(content),
+            }).then((response) => {
+                if(!response.ok) {
+                    throw new Error("Failed to call text API");
+                }
+                return response.json();
+            }).then((responseData) => {
+                var ans = responseData["res"];
+                console.log("API Text Response: ", responseData);
+                resolve(ans);
+            }).catch((error) => {
+                console.log("Error calling Text API : ", error);
+                reject(error);
+            });
+        });
+    };

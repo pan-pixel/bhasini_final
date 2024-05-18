@@ -147,3 +147,59 @@ def callBhashiniASR(base64_content):
     except Exception as e:
         print('There was a problem with the fetch operation:', e)
         raise e
+    
+
+
+
+def processAllContent(text, selectedLang):
+    url = 'https://dhruva-api.bhashini.gov.in/services/inference/pipeline'
+    
+    headers = {
+        'Content-Type': 'application/json',
+        'Authorization': os.getenv("AUTH"),
+        'Connection': 'keep-alive'
+    }
+
+    res = []
+    cache = {}
+    
+    try:
+        for t in text:
+            if t in cache:
+                translated = cache[t]
+            else:
+                body = {
+                    "pipelineTasks": [
+                        {
+                            "taskType": "transliteration",
+                            "config": {
+                                "language": {
+                                    "sourceLanguage": "en",
+                                    "targetLanguage": selectedLang
+                                },
+                                "serviceId": "ai4bharat/indictrans-v2-all-gpu--t4",
+                                "isSentence": "false",
+                                "numSuggestions": 7
+                            }
+                        }
+                    ],
+                    "inputData": {
+                        "input": [
+                            {
+                                "source": t
+                            }
+                        ]
+                    }
+                }
+                response = requests.post(url, headers=headers, json=body)
+                if not response.ok:
+                    response.raise_for_status()
+                responseData = response.json()
+                translated = responseData['pipelineResponse'][0]['output'][0]['target']
+            print("Earlier - " , t, "\nTranslated - ", translated)
+            res.append(translated)
+        return res
+    except Exception as e:
+        print('There was a problem with the fetch operation:', e)
+        raise e
+

@@ -5,6 +5,19 @@ from helper import *
 app = Flask(__name__)
 CORS(app, support_credentials=True)
 
+@app.route('/processContent', methods=['POST', 'OPTIONS'])
+@cross_origin(supports_credentials=True)
+def contentProcess():
+    if request.method == 'OPTIONS':
+        return _build_cors_preflight_response()
+    elif request.method == 'POST':
+        data = request.json['texts']
+        lang = request.json['lang']
+        res = processAllContent(data, lang)
+        return _corsify_actual_response(jsonify({"status": "OK", "res": res}))
+
+
+
 @app.route('/processAudio', methods=['POST', 'OPTIONS'])
 @cross_origin(supports_credentials=True)
 def audioProcess():
