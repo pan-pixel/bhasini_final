@@ -1,7 +1,8 @@
 import * as deepar from "deepar";
-import { scrollToNext ,scrollToPrevious } from "./carousel";
+import { scrollToNext ,scrollToPrevious, getCurrentIndex } from "./carousel";
 import { startRecording, stopRecording } from "./voice_control";
 import { currentlyRecording } from "./voice_control";
+import { addToCart } from "./addtocart";
 
 
 console.log("Deepar version: " + deepar.version);
@@ -124,8 +125,16 @@ recorderButton.addEventListener("mousedown", () => {
           loadingSpinner.style.display = "none";
           console.log("Previous - Current index:", currentIndex);
         }
+        else if(answer == "cart"){
+          console.log("cart");
+          const currentIndex = getCurrentIndex() - 2;
+          console.log("index -> ",currentIndex);
+          addToCart(currentIndex, 1);
+
+        }
         else{
-          console.log("Do nothing")
+          console.log("Do nothing");
+          
         }
       // Do something with the answer
     })

@@ -43,7 +43,7 @@ export function scrollToPrevious() {
     });
 }
 
-function getCurrentIndex() {
+export function getCurrentIndex() {
     const centerScroll = container.scrollLeft + container.offsetWidth / 2;
     let currentIndex = 0;
     cards.forEach((card, index) => {

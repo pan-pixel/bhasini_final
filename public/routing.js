@@ -19,6 +19,8 @@ const buyNowButtons = document.querySelectorAll('.buy-now-button');
         });
     });
 
+    
+    
 
 document.addEventListener('DOMContentLoaded', function() {
     const elementsToTranslate = document.querySelectorAll('.langChange');

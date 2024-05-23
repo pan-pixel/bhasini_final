@@ -1,8 +1,7 @@
 // Define variables and functions directly in the global scope
 const cards = document.querySelectorAll(".card");
 const container = document.querySelector(".cards-selection");
-const prevButton = document.querySelector(".prev-btn");
-const nextButton = document.querySelector(".next-btn");
+
 
 container.addEventListener("scroll", function(event) {
     event.preventDefault();
