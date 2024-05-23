@@ -1,5 +1,6 @@
 import { loadModel } from "./3d.js";
 import { fetchTranslation } from "./viewcontrol.js";
+import { addToCart } from "./cart.js";
 
 export async function fetchProductData(index) {
     try {
@@ -24,6 +25,8 @@ export async function fetchProductData(index) {
         loadModel(product.path);
 
         await translateTextElements();
+
+        document.getElementById('addToCart').onclick = () => addToCart(index, 1);
 
     } catch (error) {
         console.error('Error fetching product data:', error);

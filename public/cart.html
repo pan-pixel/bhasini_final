@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART</title>
+    <link rel="icon" type="image/x-icon"  href="./images/nav.svg">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/b5a8447ad3.js" crossorigin="anonymous" defer></script>
+    <style>
+        .cart-cont{
+            min-height: 100vh;
+            padding: 40px;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .left-cart-card img{
+            width: 100%;
+            width: 100%;
+            min-height: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .left-cart-card{
+            width: 30%;
+            height: 300px;
+        }
+        .right-cart-card{
+            width: 50%;
+            align-items: center;
+            gap: 100px;
+        }
+        .cart-card{
+            width: 70%;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid black; */
+            box-shadow:0 0 40px 10px rgb(215, 215, 215,0.3);
+            border-radius: 15px;
+        }
+        .cross-card{
+            position: absolute;
+            right: 1%;
+            top: 4%;
+            padding:10px 12px;
+            border: 1px solid;
+            border-radius: 50%;
+        }
+        .cart-total{
+            padding: 10px;
+            padding-top: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <section class="main-nav container flex">
+            <div class="left-nav">
+                <img src="./images/nav.svg" alt="">
+            </div>
+            <div class="mid-nav flex">
+                <ul class="navlinks flex">
+                    <li><a href="./index.html" class="hoverlinks">home</a></li>
+                    <li><a href="" class="hoverlinks">about</a></li>
+                    <li><a href="" class="hoverlinks">products</a></li>
+                    <li><a href="./AR.html" class="hoverlinks">ar try on</a></li>
+                    <li><a href="" class="hoverlinks">contact</a></li>
+                </ul>
+            </div>
+            <div class="right-nav">
+                <a href=""><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
+            </div>
+        </section>
+    </nav>
+    <section class="main-cart">
+        <div class="container cart-total">
+            <!-- <h2>Cart Total : ₹1999</h2> -->
+        </div>
+        <div class="container cart-cont flex" id="cartContainer">
+            <!-- <div class="cart-card flex">
+                <div class="left-cart-card"><img src="./images/card1.png" alt=""></div>
+                <div class="right-cart-card flex">
+                    <div class="cart-card-info">
+                        <h3>Ray ban classic</h3>
+                        <p>Quantity : 01</p>
+                    </div>
+                    
+                    <h2>₹1999</h2>
+                </div>
+                <h3 class="cross-card"><i class="fa-solid fa-trash"></i></h3>
+            </div> -->
+            
+        </div>
+    </section>
+    <footer>
+        <div class="container footer-cont flex">
+            <div class="left-foot">
+                    <img src="./images/nav.svg" alt="">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt impedit perferendis rem mollitia, ipsam doloremque dolorem, rerum, vero fugit tempore culpa animi vitae saepe a itaque? Sed maiores facere nesciunt?</p>
+            </div>
+            <div class="mid-foot">
+                <h3>Quick Links</h3>
+                <ul class="footer-links flex">
+                    <li><a href="about_us.html"class="underline">About us</a></li>
+                    <li><a href=""class="underline">Privacy Policy</a></li>
+                    <li><a href=""class="underline">Social Media</a></li>
+                    <li><a href=""class="underline">Contact</a></li>
+                </ul>
+            </div>
+            <div class="right-foot">
+                <h3>Follow Up</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="right-foot-social flex">
+                    <ul class="flex social-cont">
+                        <li><a href=""><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube fa-2xl"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-telegram fa-2xl"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest fa-2xl"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module">
+        import { renderCartPage } from './cart.js';
+        renderCartPage();
+    </script>
+</body>
+</html>
