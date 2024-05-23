@@ -8,7 +8,7 @@ export async function renderCartPage() {
         const productsData = await response.json();
         const products = productsData.products;
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
+        var cart_total = 0;
         const cartContainer = document.getElementById('cartContainer');
         cartContainer.innerHTML = ''; // Clear previous contents
 
@@ -19,6 +19,8 @@ export async function renderCartPage() {
 
         cart.forEach(item => {
             const product = products[item.index];
+            cart_total = cart_total + (product.price * item.quantity)
+
             const productElement = document.createElement('div');
             productElement.className = 'cart-card flex';
 
@@ -59,6 +61,10 @@ export async function renderCartPage() {
     } catch (error) {
         console.error('Error rendering cart page:', error);
     }
+    const cartTot = document.getElementById('cartTotal');
+    cartTot.innerHTML = `
+        <h2>Cart Total : ${cart_total}</h2>
+    `;
 }
 
 export function addToCart(index, quantity) {
