@@ -9,7 +9,7 @@
     },
     {
       "name": "vincent case",
-      "image":"./images/card1.png",
+      "image":"./images/card2.png",
 
       "description": "Elevate your look with Vincent Case sunglasses. Combining classic aviator style with contemporary edge, they exude effortless coolness. Sleek metal rims and bold geometric lines make a statement wherever you go.",
       "price": 2999,
@@ -17,7 +17,7 @@
     },
     {
       "name": "john jacobs rim aviator",
-      "image":"./images/card1.png",
+      "image":"./images/card3.png",
 
       "description": "Discover understated luxury with John Jacobs Rim Aviator sunglasses. Minimalist design meets premium materials for refined elegance. Lightweight acetate and durable metal accents ensure both style and substance. Perfect for any occasion, they add a touch of sophistication to every ensemble.",
       "price": 999,
@@ -25,7 +25,7 @@
     },
     {
       "name": "Oakley Holbrook",
-      "image":"./images/card1.png",
+      "image":"./images/card6.png",
 
       "description": "Make a bold statement with Oakley Holbrook sunglasses. Inspired by the screen heroes from the 1940s, 50s, and 60s, these shades represent the spirit of exploration and adventure. With high-definition optics and O-Matter frame material, they offer unparalleled comfort and clarity.",
       "price": 1699,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Persol PO0649",
-      "image":"./images/card1.png",
+      "image":"./images/card4.png",
       
       "description": "Channel vintage Italian glamour with Persol PO0649 sunglasses. Handcrafted with the highest quality acetate and crystal lenses, these shades exude sophistication and style. The iconic arrow hinges and keyhole bridge add a timeless touch to any look.",
       "price": 2399,
@@ -41,7 +41,7 @@
     },
     {
       "name": "Prada Linea Rossa",
-      "image":"./images/card1.png",
+      "image":"./images/card7.png",
 
       "description": "Experience urban sophistication with Prada Linea Rossa sunglasses. Designed for the modern adventurer, these shades combine sporty elegance with innovative technology. The sleek wraparound design and rubber temples ensure a comfortable fit, while the mirrored lenses add a touch of edge to any outfit.",
       "price": 2999,
@@ -49,7 +49,7 @@
     },
     {
       "name": "Dior Stellaire",
-      "image":"./images/card1.png",
+      "image":"./images/card5.png",
 
       "description": "Step into the spotlight with Dior Stellaire sunglasses. Featuring oversized square frames and ultra-thin metal temples, these shades exude glamour and sophistication. The gradient lenses add a touch of mystique, making them perfect for both daytime outings and evening soirees.",
       "price": 1399,
