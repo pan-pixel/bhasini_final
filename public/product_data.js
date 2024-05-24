@@ -26,8 +26,35 @@ export async function fetchProductData(index) {
 
         await translateTextElements();
 
-        document.getElementById('addToCart').onclick = () => addToCart(index, 1);
+        const addToCartButton = document.getElementById('addToCart');
+        const cartIcon = addToCartButton.querySelector('i');
+        const buttonText = addToCartButton.querySelector('.langChange');
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+        // Check if the product is already in the cart
+        const existingItem = cart.find(item => item.index === index);
+
+        if (existingItem) {
+            // Update button to indicate item is in the cart
+            cartIcon.classList.remove('fa-cart-shopping');
+            cartIcon.classList.add('fa-check');
+            buttonText.innerText = 'Added to cart';
+        } else {
+            // Reset button to default state
+            cartIcon.classList.remove('fa-check');
+            cartIcon.classList.add('fa-cart-shopping');
+            buttonText.innerText = 'Cart';
+        }
+
+        addToCartButton.onclick = () => {
+            addToCart(index, 1);
+
+            // Update button after adding to cart
+            cartIcon.classList.remove('fa-cart-shopping');
+            cartIcon.classList.add('fa-check');
+            buttonText.innerText = 'Added to cart';
+        };
+        
     } catch (error) {
         console.error('Error fetching product data:', error);
     }
