@@ -25,7 +25,8 @@ def audioProcess():
         return _build_cors_preflight_response()
     elif request.method == 'POST':
         data = request.json['audio'].split(",")[1]
-        res = callBhashiniASR(data)
+        lang = request.json['lang']
+        res = callBhashiniASR(data, lang)
         return _corsify_actual_response(jsonify({"status": "OK", "res": res}))
 
 def _build_cors_preflight_response():

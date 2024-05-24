@@ -31,12 +31,6 @@ voiceModels ={
     "ta" : "bhashini/iitm/asr-dravidian--gpu--t4"                       #Tamil
 }
 
-selectedLang = "hi"
-
-if selectedLang == "or":
-    targetLangAPI = translateModels["or"]
-else:
-    targetLangAPI = translateModels["all"]
 
 
 
@@ -54,7 +48,12 @@ def convertToCommand(text):
     else:
         return "again"
 
-def callBhashiniASR(base64_content):
+def callBhashiniASR(base64_content, selectedLang):
+    if selectedLang == "or":
+        targetLangAPI = translateModels["or"]
+    else:
+        targetLangAPI = translateModels["all"]
+
     url = 'https://dhruva-api.bhashini.gov.in/services/inference/pipeline'
     
     headers = {

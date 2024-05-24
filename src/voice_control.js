@@ -25,9 +25,11 @@ function speak(text){
 }
 
 function callAPI(base64) {
+    var selectedLanguage = localStorage.getItem('language');
     const apiUrl = "http://127.0.0.1:5000/processAudio";
     const data = {
       audio: base64,
+      lang: selectedLanguage,
     };
   
     // Return a promise
