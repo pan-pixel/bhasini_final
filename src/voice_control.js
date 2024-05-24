@@ -49,10 +49,10 @@ function callAPI(base64) {
           var text = responseData["res"];
           var answer = text;
           if (text == "next" || text == "previous") {
-            text = "Going to the " + text + " page.";
+            text = "Going to the " + text + " product.";
             speak(text);
           } else if (text == "cart") {
-            text = "Adding this to cart.";
+            text = "Adding this product to cart.";
             speak(text);
           } else {
             if (count < 1) {

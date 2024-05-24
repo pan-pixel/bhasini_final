@@ -36,7 +36,7 @@ export async function renderCartPage() {
             cardInfo.innerHTML = `
                 <h3>${product.name}</h3>
                 <p>Quantity: ${item.quantity}</p>
-                <p>Total: ₹${product.price * item.quantity}</p>
+                <p>Total: ₹ ${product.price * item.quantity}</p>
             `;
             leftCard.innerHTML = `
                 <img src="${product.image}">
@@ -63,7 +63,7 @@ export async function renderCartPage() {
     }
     const cartTot = document.getElementById('cartTotal');
     cartTot.innerHTML = `
-        <h2>Cart Total : ${cart_total}</h2>
+        <h2>Cart Total : ₹ ${cart_total}</h2>
     `;
 }
 
