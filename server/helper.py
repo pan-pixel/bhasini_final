@@ -44,7 +44,7 @@ def convertToCommand(text):
     completion = openai.chat.completions.create(
         model="gpt-3.5-turbo-1106",
         messages=[
-            {"role": "user", "content": "From now on, I will be giving you text in various languages, if the overall meaning of the text is to go to next page respond with 'next', if it is to go to previous page respond with 'previous' and if it means to add product to cart respond with 'cart'"},
+            {"role": "user", "content": "From now on, I will be giving you text in various languages, if the overall meaning of the text is to go to next page respond with 'next', if it is to go to previous page respond with 'previous' and if it means to add product to cart or buy the product respond with 'cart'"},
             {"role": "user", "content": text}
         ]
     )
