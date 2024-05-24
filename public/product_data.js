@@ -38,21 +38,20 @@ export async function fetchProductData(index) {
             // Update button to indicate item is in the cart
             cartIcon.classList.remove('fa-cart-shopping');
             cartIcon.classList.add('fa-check');
-            buttonText.innerText = 'Added to cart';
+            buttonText.innerText = ` In cart: ${existingItem.quantity}`;
         } else {
             // Reset button to default state
             cartIcon.classList.remove('fa-check');
             cartIcon.classList.add('fa-cart-shopping');
-            buttonText.innerText = 'Cart';
+            buttonText.innerText = 'Add to Cart';
         }
 
         addToCartButton.onclick = () => {
             addToCart(index, 1);
-
-            // Update button after adding to cart
-            cartIcon.classList.remove('fa-cart-shopping');
-            cartIcon.classList.add('fa-check');
-            buttonText.innerText = 'Added to cart';
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItem = cart.find(item => item.index === index);
+            buttonText.innerText = ` In cart: ${existingItem.quantity}`;
+            
         };
         
     } catch (error) {
@@ -76,4 +75,17 @@ async function translateTextElements() {
             console.error('Error translating text:', error);
         }
     }
+}
+
+export function updateCardButton(index){
+    const addToCartButton = document.getElementById('addToCart');
+    const cartIcon = addToCartButton.querySelector('i');
+    const buttonText = addToCartButton.querySelector('.langChange');
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Check if the product is already in the cart
+    const existingItem = cart.find(item => item.index === index);
+    buttonText.innerText = ` In cart: ${existingItem.quantity}`;
+
+    
 }

@@ -74,9 +74,6 @@ export function addToCart(index, quantity) {
     let existingItem = cart.find(item => item.index === index);
 
     if (existingItem) {
-        if(existingItem.quantity >5){
-            existingItem.quantity = 0;
-        }
         existingItem.quantity += quantity;
         console.log("increased");
     } else {
