@@ -42,7 +42,7 @@ export async function renderCartPage() {
                 <img src="${product.image}">
             `;
             const productPriceHeading = document.createElement('h2');
-            productPriceHeading.textContent = product.price;
+            productPriceHeading.textContent = '₹' + product.price;
             const crossCard = document.createElement('button');
 
             crossCard.innerHTML = `
