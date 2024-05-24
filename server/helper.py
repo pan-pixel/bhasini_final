@@ -38,7 +38,7 @@ def convertToCommand(text):
     completion = openai.chat.completions.create(
         model="gpt-3.5-turbo-1106",
         messages=[
-            {"role": "user", "content": "From now on, I will be giving you text in various languages, if the overall meaning of the text is to go to next page respond with 'next', if it is to go to previous page respond with 'previous' and if it means to add product to cart or buy the product respond with 'cart'"},
+            {"role": "user", "content": "From now on, I will be giving you text in various languages, if the overall meaning of the text is to go to next page or move ahead or show something else respond with 'next', if it is to go to previous page or show any previous item respond with 'previous' and if it means to add product to cart, add to basket or buy the product respond with 'cart'"},
             {"role": "user", "content": text}
         ]
     )
@@ -134,7 +134,7 @@ def callBhashiniASR(base64_content, selectedLang):
             translation = responseData['pipelineResponse'][1]['output'][0]['target'].lower()
         # print("Original : ", responseData['pipelineResponse'][1]['output'][0]['source'].lower())
         print("Translated : ",translation)
-        if ('next' in translation):
+        if ('next' in translation or 'ahead' in translation):
             return 'next'
         elif ('previous' in translation):
             return 'previous'
