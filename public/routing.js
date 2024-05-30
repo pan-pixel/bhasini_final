@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
     async function fetchTranslation(texts, targetLanguage) {
-        const apiUrl = "http://127.0.0.1:5000/processContent";
+        const apiUrl = "https://backendserver-u4zv.onrender.com/processContent";
         const content = {
             texts: texts,
             lang: targetLanguage

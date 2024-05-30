@@ -26,7 +26,7 @@ function speak(text){
 
 function callAPI(base64) {
     var selectedLanguage = localStorage.getItem('language');
-    const apiUrl = "http://127.0.0.1:5000/processAudio";
+    const apiUrl = "https://backendserver-u4zv.onrender.com/processAudio";
     const data = {
       audio: base64,
       lang: selectedLanguage,

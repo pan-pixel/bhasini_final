@@ -138,7 +138,7 @@ def callBhashiniASR(base64_content, selectedLang):
             return 'next'
         elif ('previous' in translation):
             return 'previous'
-        elif ('cart' in translation):
+        elif ('cart' in translation or 'cut' in translation):
             return 'cart'
         else:
             print("USING GPT")
