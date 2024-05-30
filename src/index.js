@@ -43,7 +43,7 @@ const selectedIndex = localStorage.getItem('selectedIndex');
   // Initialize DeepAR with an effect file.
   try {
     deepAR = await deepar.initialize({
-      licenseKey: "dd52c9349804e37aca045e8e1c5b8f8e1e717f082d36a157c70a9e6ddd7c5fcf229c1c713f7d3f24",
+      licenseKey: "066b47f0f3a12c596fc8f4eea876ececd8e42df08707ef8fb26866d75b96a9abc82972325bd376ca",
       previewElement,
       effect: effectList[0],
       // Removing the rootPath option will make DeepAR load the resources from the JSdelivr CDN,
