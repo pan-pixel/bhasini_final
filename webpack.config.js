@@ -44,6 +44,7 @@ module.exports = {
         publicPath: "/deepar-resources",
       },
     ],
+    host: '0.0.0.0',
     compress: true,
     port: 9000,
   },
