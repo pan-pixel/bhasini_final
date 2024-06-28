@@ -85,7 +85,7 @@ nav{
     opacity: 0.9;
 }
 .right-banner-content img{
-    width: 100%;
+    width: 60%;
     animation:imagefloat 40s ease-in-out infinite ;
 }
 
