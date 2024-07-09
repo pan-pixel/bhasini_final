@@ -1,6 +1,13 @@
 {
   "products": [
     {
+      "name": "Raj Turbans",
+      "image":"./images/pug.png",
+      "description":"Very soft and high material turbans",
+      "price":599,
+      "path":"../models/turban.glb"
+    },
+    {
       "name": "ray ban classic",
       "image":"./images/card1.png",
       "description": "Experience timeless elegance with Ray Ban Classic sunglasses. Crafted for enduring style, these shades blend iconic design with modern flair. From sleek Wayfarer frames to versatile lens options, they're the epitome of sophistication.",
