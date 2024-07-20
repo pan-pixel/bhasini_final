@@ -15,11 +15,11 @@
       "path":"../models/army-turban.glb"
     },
     {
-      "name": "Green necklace",
-      "image":"./images/pug.png",
-      "description":"Army pugdi",
+      "name": "Minecraft glasses",
+      "image":"./images/card5.png",
+      "description":"Amazing glasses",
       "price":1599,
-      "path":"../models/green-necklace.glb"
+      "path":"../models/specs5.glb"
     },
     {
       "name": "Goel necklesses",

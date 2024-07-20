@@ -29,10 +29,10 @@ const selectedIndex = localStorage.getItem('selectedIndex');
   // All the effects are in the public/effects folder.
   // Here we define the order of effect files.
   const effectList = [
-    "effects/ruby-necklace.deepar",
-    "effects/army-turban.deepar",
-    "effects/green-necklace.deepar",
-    "effects/thin-necklace.deepar",
+    "effects/check_new.deepar",
+    "effects/new_turban.deepar",
+    "effects/specs4.deepar",
+    "effects/gold_chain.deepar",
     "effects/ray-ban-wayfarer.deepar",
     "effects/Chashma.deepar",
     "effects/specs3.deepar",
