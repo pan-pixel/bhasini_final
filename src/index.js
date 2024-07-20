@@ -2,7 +2,7 @@ import * as deepar from "deepar";
 import { scrollToNext ,scrollToPrevious, getCurrentIndex } from "./carousel";
 import { startRecording, stopRecording } from "./voice_control";
 import { currentlyRecording } from "./voice_control";
-import { addToCart } from "./addtocart";
+import { addToCart, showSnackbar } from "./addtocart";
 
 
 console.log("Deepar version: " + deepar.version);
@@ -139,6 +139,8 @@ recorderButton.addEventListener("mousedown", () => {
         }
         else{
           console.log("Do nothing");
+          const message = "Try again! Couldn't understand you."
+          showSnackbar(message);
           
         }
       // Do something with the answer

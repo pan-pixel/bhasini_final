@@ -17,12 +17,14 @@ export function addToCart(index, quantity) {
     }
     console.log(cart)
     localStorage.setItem('cart', JSON.stringify(cart));
-    showSnackbar();
+    const message = "Product added to cart!"
+    showSnackbar(message);
 };
 
-function showSnackbar() {
+export function showSnackbar(message) {
     // Get the snackbar DIV
     var snackbar = document.getElementById("snackbar");
+    snackbar.textContent = message;
 
     // Add the "show" class to DIV
     snackbar.className = "show";
