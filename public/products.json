@@ -5,21 +5,21 @@
       "image":"./images/orange-turban.png",
       "description":"Celebrate heritage and style withPunjabi Traditional Turban, a masterpiece that honors local craftsmanship and timeless tradition.",
       "price":599,
-      "path":"../models/sikh_turban2.glb"
+      "path":"../models/sikh-t2.glb"
     },
     {
       "name": "RUBY NECKLACE",
       "image":"./images/ruby.png",
       "description":"Adorn yourself with the fiery elegance of Goyal Jewellery's Ruby Radiance Necklace, where each ruby tells a story of timeless luxury.",
       "price":2599,
-      "path":"../models/neck.glb"
+      "path":"../models/ruby-new2.glb"
     },
     {
       "name": "Army pugdi",
       "image":"./images/army.png",
       "description":"Stand out with pride in our Indian Army Style Camouflage Pagdi, a symbol of honor and valor from Arora Tailors",
       "price":699,
-      "path":"../models/army-turban.glb"
+      "path":"../models/army-new.glb"
     },
     {
       "name": "Minecraft glasses",

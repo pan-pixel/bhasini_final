@@ -17,8 +17,8 @@ const container = document.getElementById('container');
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xffffff);
-var ambientLight = new THREE.AmbientLight(0xffffff, 3); // color, intensity
-scene.add(ambientLight);
+// var ambientLight = new THREE.AmbientLight(0xffffff, 3); // color, intensity
+// scene.add(ambientLight);
 
 const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
 camera.position.setY(3);
