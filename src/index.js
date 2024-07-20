@@ -29,6 +29,7 @@ const selectedIndex = localStorage.getItem('selectedIndex');
   // All the effects are in the public/effects folder.
   // Here we define the order of effect files.
   const effectList = [
+    "effects/orange-turban.deepar",
     "effects/check_new.deepar",
     "effects/new_turban.deepar",
     "effects/specs4.deepar",

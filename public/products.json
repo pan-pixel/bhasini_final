@@ -1,6 +1,13 @@
 {
   "products": [
     {
+      "name": "Punjabi Turban",
+      "image":"./images/orange-turban.png",
+      "description":"Celebrate heritage and style withPunjabi Traditional Turban, a masterpiece that honors local craftsmanship and timeless tradition.",
+      "price":599,
+      "path":"../models/sikh_turban2.glb"
+    },
+    {
       "name": "RUBY NECKLACE",
       "image":"./images/ruby.png",
       "description":"Adorn yourself with the fiery elegance of Goyal Jewellery's Ruby Radiance Necklace, where each ruby tells a story of timeless luxury.",
@@ -25,7 +32,7 @@
       "name": "Gold Chain",
       "image":"./images/chain.png",
       "description":"Embrace elegance and tradition with Goyal Jewellery's Gold Chain, a timeless piece crafted with local artistry.",
-      "price":1599,
+      "price":4599,
       "path":"../models/thin-necklace.glb"
     },
     {
