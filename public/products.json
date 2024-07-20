@@ -1,11 +1,32 @@
 {
   "products": [
     {
-      "name": "Raj Turbans",
+      "name": "RUBY NECKLACE",
       "image":"./images/pug.png",
-      "description":"Very soft and high material turbans",
-      "price":599,
-      "path":"../models/turban.glb"
+      "description":"Very elegant neckless.",
+      "price":1599,
+      "path":"../models/ruby-necklace.glb"
+    },
+    {
+      "name": "Army pugdi",
+      "image":"./images/pug.png",
+      "description":"Army pugdi",
+      "price":1599,
+      "path":"../models/army-turban.glb"
+    },
+    {
+      "name": "Minecraft glasses",
+      "image":"./images/card5.png",
+      "description":"Amazing glasses",
+      "price":1599,
+      "path":"../models/specs5.glb"
+    },
+    {
+      "name": "Goel necklesses",
+      "image":"./images/pug.png",
+      "description":"Very elegant neckless.",
+      "price":1599,
+      "path":"../models/thin-necklace.glb"
     },
     {
       "name": "ray ban classic",
@@ -37,30 +58,6 @@
       "description": "Make a bold statement with Oakley Holbrook sunglasses. Inspired by the screen heroes from the 1940s, 50s, and 60s, these shades represent the spirit of exploration and adventure. With high-definition optics and O-Matter frame material, they offer unparalleled comfort and clarity.",
       "price": 1699,
       "path":"../models/simple_glasses.glb"
-    },
-    {
-      "name": "Persol PO0649",
-      "image":"./images/card4.png",
-      
-      "description": "Channel vintage Italian glamour with Persol PO0649 sunglasses. Handcrafted with the highest quality acetate and crystal lenses, these shades exude sophistication and style. The iconic arrow hinges and keyhole bridge add a timeless touch to any look.",
-      "price": 2399,
-      "path":"../models/specs1.glb"
-    },
-    {
-      "name": "Prada Linea Rossa",
-      "image":"./images/card7.png",
-
-      "description": "Experience urban sophistication with Prada Linea Rossa sunglasses. Designed for the modern adventurer, these shades combine sporty elegance with innovative technology. The sleek wraparound design and rubber temples ensure a comfortable fit, while the mirrored lenses add a touch of edge to any outfit.",
-      "price": 2999,
-      "path":"../models/specs2.glb"
-    },
-    {
-      "name": "Dior Stellaire",
-      "image":"./images/card5.png",
-
-      "description": "Step into the spotlight with Dior Stellaire sunglasses. Featuring oversized square frames and ultra-thin metal temples, these shades exude glamour and sophistication. The gradient lenses add a touch of mystique, making them perfect for both daytime outings and evening soirees.",
-      "price": 1399,
-      "path":"../models/specs5.glb"
     }
   ]
 }
