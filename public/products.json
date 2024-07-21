@@ -1,31 +1,38 @@
 {
   "products": [
     {
+      "name": "Punjabi Turban",
+      "image":"./images/orange-turban.png",
+      "description":"Celebrate heritage and style withPunjabi Traditional Turban, a masterpiece that honors local craftsmanship and timeless tradition.",
+      "price":599,
+      "path":"../models/sikh-t2.glb"
+    },
+    {
       "name": "RUBY NECKLACE",
-      "image":"./images/pug.png",
-      "description":"Very elegant neckless.",
-      "price":1599,
-      "path":"../models/ruby-necklace.glb"
+      "image":"./images/ruby.png",
+      "description":"Adorn yourself with the fiery elegance of Goyal Jewellery's Ruby Radiance Necklace, where each ruby tells a story of timeless luxury.",
+      "price":2599,
+      "path":"../models/ruby-new2.glb"
     },
     {
       "name": "Army pugdi",
-      "image":"./images/pug.png",
-      "description":"Army pugdi",
-      "price":1599,
-      "path":"../models/army-turban.glb"
+      "image":"./images/army.png",
+      "description":"Stand out with pride in our Indian Army Style Camouflage Pagdi, a symbol of honor and valor from Arora Tailors",
+      "price":699,
+      "path":"../models/army-new.glb"
     },
     {
       "name": "Minecraft glasses",
       "image":"./images/card5.png",
-      "description":"Amazing glasses",
+      "description":"Support 'Vocal for Local' with Minecraft-themed glasses, blending local craftsmanship with global inspiration!",
       "price":1599,
       "path":"../models/specs5.glb"
     },
     {
-      "name": "Goel necklesses",
-      "image":"./images/pug.png",
-      "description":"Very elegant neckless.",
-      "price":1599,
+      "name": "Gold Chain",
+      "image":"./images/chain.png",
+      "description":"Embrace elegance and tradition with Goyal Jewellery's Gold Chain, a timeless piece crafted with local artistry.",
+      "price":4599,
       "path":"../models/thin-necklace.glb"
     },
     {

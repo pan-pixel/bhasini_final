@@ -2,7 +2,7 @@ import * as deepar from "deepar";
 import { scrollToNext ,scrollToPrevious, getCurrentIndex } from "./carousel";
 import { startRecording, stopRecording } from "./voice_control";
 import { currentlyRecording } from "./voice_control";
-import { addToCart } from "./addtocart";
+import { addToCart, showSnackbar } from "./addtocart";
 
 
 console.log("Deepar version: " + deepar.version);
@@ -29,6 +29,7 @@ const selectedIndex = localStorage.getItem('selectedIndex');
   // All the effects are in the public/effects folder.
   // Here we define the order of effect files.
   const effectList = [
+    "effects/orange-turban.deepar",
     "effects/check_new.deepar",
     "effects/new_turban.deepar",
     "effects/specs4.deepar",
@@ -138,6 +139,8 @@ recorderButton.addEventListener("mousedown", () => {
         }
         else{
           console.log("Do nothing");
+          const message = "Try again! Couldn't understand you."
+          showSnackbar(message);
           
         }
       // Do something with the answer
