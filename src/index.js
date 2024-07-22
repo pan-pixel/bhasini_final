@@ -31,13 +31,14 @@ const selectedIndex = localStorage.getItem('selectedIndex');
   const effectList = [
     "effects/orange-turban.deepar",
     "effects/check_new.deepar",
-    "effects/new_turban.deepar",
     "effects/specs4.deepar",
     "effects/gold_chain.deepar",
     "effects/ray-ban-wayfarer.deepar",
     "effects/Chashma.deepar",
     "effects/specs3.deepar",
     "effects/SimpleGlasses.deepar",
+    "effects/new_turban.deepar",
+
     // "effects/specs1.deepar",
     // "effects/specs2.deepar",
     // "effects/specs4.deepar",
